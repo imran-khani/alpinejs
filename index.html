@@ -21,19 +21,19 @@
           items:['imran','khan','jamal','kamal']
           ,
           get FilteredItems(){
-            return this.items.filter(item => item.startsWith(this.search))
+            return this.items.filter(item => item.includes(this.search))
           },
           isFocused:false,
         }"
         >
           <input
-            class="animate__animated animate__jello mt-5 p-2 border-none ring ring-indigo-200 outline-none rounded-md"
+            class="animate__animated animate__hinge  mt-5 p-2 border-none ring ring-indigo-200 outline-none rounded-md"
             type="text"
             x-model="search"
             placeholder="Search..."
             x-on:focus="isFocused = true"
             x-on:blur="isFocused = false"
-            :class="{'animate__jello':isFocused}"
+            :class="{'animate__hinge  ':isFocused}"
           />
           <ul class="mt-5 grid grid-cols-2 gap-x-5">
             <template x-for="item in FilteredItems" :key="item">
