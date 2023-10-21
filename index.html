@@ -7,7 +7,7 @@
     <title>Learning alpine</title>
   </head>
   <body class="bg-indigo-100">
-    <div class="container mx-auto px-4 py-20 bg-gray-200 h-screen">
+    <div class="mx-auto px-4 py-20 bg-gray-200 h-screen">
       <div class="flex flex-col items-center justify-center">
         <!-- search menu using alpine js -->
         <h1 class="text-4xl font-bold text-gray-800">Search menu</h1>
@@ -22,10 +22,14 @@
         }"
         >
           <input
-            class="mt-5 p-2 border-none ring ring-indigo-500 outline-none rounded-md"
+            class="mt-5 p-2 border-none ring ring-indigo-200 outline-none rounded-md"
             type="text"
             x-model="search"
+            placeholder="Search..."
           />
+          <ul>
+            <template> </template>
+          </ul>
         </div>
       </div>
     </div>
