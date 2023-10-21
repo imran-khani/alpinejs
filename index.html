@@ -18,14 +18,17 @@
           ,
           getFilteredItems(){
             return this.items.filter(item => item.startsWith(this.search))
-          }
+          },
+          isFocused:false,
         }"
         >
           <input
-            class="mt-5 p-2 border-none ring ring-indigo-200 outline-none rounded-md"
+            class="animate__flipInX animate__animated mt-5 p-2 border-none ring ring-indigo-200 outline-none rounded-md"
             type="text"
             x-model="search"
             placeholder="Search..."
+            x-on:focus="{isFocused=true}"
+            x-on:blur="{isFocused=false}"
           />
           <ul>
             <template> </template>
