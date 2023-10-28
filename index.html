@@ -8,39 +8,13 @@
   </head>
   <body class="bg-indigo-100">
     <div class="mx-auto px-4 py-20 bg-gray-200 h-screen">
-      <div class="flex flex-col items-center justify-center">
+      <div class="flex flex-col items-center text-center gap-5">
         <!-- search menu using alpine js -->
         <h1
           class="text-4xl font-bold text-gray-800 animate__backInDown animate__animated"
         >
-          Search menu
+          Alpine Js
         </h1>
-        <div
-          x-data="{
-          search:'',
-          items:['imran','khan','jamal','kamal']
-          ,
-          get FilteredItems(){
-            return this.items.filter(item => item.includes(this.search))
-          },
-          isFocused:false,
-        }"
-        >
-          <input
-            class="animate__animated animate__hinge  mt-5 p-2 border-none ring ring-indigo-200 outline-none rounded-md"
-            type="text"
-            x-model="search"
-            placeholder="Search..."
-            x-on:focus="isFocused = true"
-            x-on:blur="isFocused = false"
-            :class="{'animate__hinge  ':isFocused}"
-          />
-          <ul class="mt-5 grid grid-cols-2 gap-x-5">
-            <template x-for="item in FilteredItems" :key="item">
-              <li class="border-b-gray-300 border-2" x-text="item"></li>
-            </template>
-          </ul>
-        </div>
       </div>
     </div>
     <script type="module" src="/main.js"></script>
