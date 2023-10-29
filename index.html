@@ -15,6 +15,13 @@
         >
           Alpine Js
         </h1>
+
+        <div x-data="{open:false}">
+          <button @click="open = !open">Toggle</button>
+          <p x-show="open" x-transition>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, a.
+          </p>
+        </div>
       </div>
     </div>
     <script type="module" src="/main.js"></script>
